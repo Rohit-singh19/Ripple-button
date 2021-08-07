@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #5c6161;
+}
+
+.btn{
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    background: linear-gradient(to right, #c94b4b, #4b134f);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 3px;
+    position: relative;
+    cursor: pointer;
+    z-index: 99;
+    overflow: hidden;
+}
+
+
+.btn:hover span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    animation: ripple 1s linear infinite;
+    z-index: 100;
+}
+
+@keyframes ripple {
+    0%{
+        width: 0;
+        height: 0;
+        opacity: .2;
+    }
+    100%{
+        width: 600px;
+        height: 600px;
+        opacity: 0;
+    }
+}
